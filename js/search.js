@@ -19,7 +19,7 @@ const setList = (data) =>{
     clearList();
     for(const article of data){
         list.insertAdjacentHTML('beforeend',`
-        <li class="search-list__item">${article.title}</li>
+        <li tabIndex="0" class="search-list__item">${article.title}</li>
         `)
     }
     if(data.length === 0) setNoResults();

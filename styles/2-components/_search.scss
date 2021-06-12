@@ -112,6 +112,10 @@
         &:hover:before{
             height:60%;
         }
+        &:focus-visible{
+            outline-offset: 0;
+            outline:2px dashed $lightBlue;
+        }
     }
     &__error{
         display:flex;

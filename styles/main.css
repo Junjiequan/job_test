@@ -156,6 +156,10 @@
 .search-list__item:hover:before {
   height: 60%;
 }
+.search-list__item:focus-visible {
+  outline-offset: 0;
+  outline: 2px dashed #2c84af;
+}
 .search-list__error {
   display: flex;
   height: 100%;
