@@ -1060,7 +1060,8 @@ span {
 .footer-stream {
   display: flex;
   flex-direction: column;
-  max-width: 21rem;
+  max-width: 16rem;
+  width: 100%;
 }
 .footer-stream__grid {
   display: grid;
@@ -1081,7 +1082,8 @@ span {
 .footer-contact {
   display: flex;
   flex-direction: column;
-  max-width: 21rem;
+  max-width: 16rem;
+  width: 100%;
 }
 .footer-contact p {
   line-height: 1.6rem;
