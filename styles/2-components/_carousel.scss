@@ -1,0 +1,33 @@
+@use '../1-utilities/' as *;
+
+.carousel{
+    width:79%;
+    height:36.2rem;
+    &-cell{
+        width:100%;
+        height:100%;
+        background-repeat:no-repeat;
+        background-position:center center;
+        background-size:cover;
+    }
+    @media screen and (max-width:1201px){
+        width:100%;
+    }
+}
+
+//carousel dots;
+.flickity-page-dots {
+    width:100%;
+    transform:translateY(-3rem);
+  }
+.flickity-page-dots .dot {
+    width: 1.5rem;
+    height: 1.5rem;
+    opacity: 1;
+    background: transparent;
+    border: 2px solid rgba($color: #ffffff, $alpha: 0.6);
+    transform:Scale(1.2);
+}
+.flickity-page-dots .dot.is-selected {
+    background: rgba($color: white, $alpha: 1);
+  }

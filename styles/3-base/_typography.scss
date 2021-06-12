@@ -1,0 +1,26 @@
+@use '../1-utilities' as *;
+
+body{
+    font-family: 'Garamond';
+}
+h1{
+    font-size:rem(3);
+    @extend %b-500;
+}
+h2{
+    font-size:rem(2);
+    @extend %b-500;
+    line-height:rem(2.5);
+}
+h3{
+    font-size:rem(3);
+    @extend %b-500;
+    line-height:rem(3.5);
+}
+p{
+    font-size:rem(1.6);
+    line-height:rem(2);
+}
+span{
+    font-size:rem(1.2);
+}

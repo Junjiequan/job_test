@@ -1,0 +1,32 @@
+@use '../1-utilities/' as *;
+
+.sponsors{
+    display:flex;
+    justify-content:center;
+    margin:1rem 1rem 3rem;
+    overflow: hidden;
+    &__wrapper{
+        max-width:1200px;
+        width:100%;
+    }
+    &__grid{
+        margin-top:2rem;
+        display:grid;
+        grid-template-columns: repeat(auto-fill, minmax(10rem,1fr));
+        grid-template-rows:auto;
+        column-gap:1rem;
+        row-gap:1rem;
+    }
+    &__logo{
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        padding:.3rem;
+        background:$lightGray;
+        box-shadow:0 2px 5px rgba($color: #808080, $alpha: 0.3);
+        & img{
+            object-fit: fill;
+            max-width:100%;
+        }
+    }
+}

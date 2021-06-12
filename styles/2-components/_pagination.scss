@@ -1,0 +1,60 @@
+@use '../1-utilities/' as *;
+
+.pagination{
+    display:inline-flex;
+    justify-content:flex-start;
+    align-items:center;
+    font-family:'arial';
+    font-size:rem(1.4);
+    color:$darkGray;
+    &__current{
+        pointer-events: none;
+        margin-right:.3rem;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        background:$lightGray;
+        padding:.4rem .6rem;
+    }
+    &__box{
+        margin-right:.3rem;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        padding:.2rem .4rem;
+    }
+    &__box-number{
+        cursor:pointer;
+        user-select: none;
+        background:$lightGray;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        padding:.2rem .6rem;
+        margin-right:.3rem;
+        &:hover{
+            color:$white;
+            background:$gray;
+            @extend %b-700;
+        }
+        &:focus-visible{
+            z-index:2;
+            outline:2px dashed $darkGray;
+            outline-offset: 2px;
+        }
+    }
+    @media screen and (max-width:450px){
+        flex-wrap:wrap;
+        flex-direction:column-reverse;
+        align-items:flex-start;
+        &__box{
+            margin-bottom:.5rem;
+            padding:.2rem .4rem .2rem 0; 
+        }
+    }
+}
+.active{
+    background:$gray;
+    color:$white;
+    @extend %b-700;
+}

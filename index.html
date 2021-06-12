@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script type="module" src="js/main.js"></script>
+    <title>Job Test | by Jay</title>
+</head>
+<body >
+    <div class="modal" data-modal>
+        <div class="modal__container">
+            <div class="modal__wrapper" data-modal-content>
+                <span class="modal__close" data-modal-close><i class="fas fa-window-close"></i></span>
+                <h1>DEMO</h1>
+                <h2>TITLETITTITITITLE</h2>
+                <p></p>
+            </div>
+        </div>
+    </div>
+    <header class="header">
+        <div class="header__wrapper">
+            <a class="header__logo" href="#" aria-label="scroll the page to the top"><img src="./images/logo.png" alt="NorDIC logo"></a>
+            <div class="search">
+                <input type="search" title="type content for searching" placeholder="Search..." id="search" name="search" autocomplete="off" data-search/>
+                <span class="search-icon"><i class="fas fa-search"></i></span>
+            </div>
+            <nav class="header-nav" aria-label="Main">
+                <ul class="header-nav__menu">
+                    <li class="header-nav__link"><a href="#" >about nbc</a></li>
+                    <li class="header-nav__link"><a href="#" >2011 event</a></li>
+                    <li class="header-nav__link"><a href="#" >nordic roaster</a></li>
+                    <li class="header-nav__link"><a href="#" >results</a></li>
+                    <li class="header-nav__link"><a href="#" >links</a></li>
+                    <li class="header-nav__link"><a href="#" >contact</a></li>
+                </ul>
+            </nav>
+            <button class="hamburger hamburger--elastic" data-js-hamburger  aria-label ="open mobile navmenu"  id="MobileNavMenu">
+                <span class="hamburger-box">
+                  <span class="hamburger-inner"></span>
+                </span>
+            </button>
+            <aside class="search-list" data-js="search-opacity">
+                <ul class="search-list__wrapper" data-search-list>
+                    <!-- <li class="search-list__item">Wonderful Copenhagen 2036 - article 16</li> -->
+                    <li class="search-list__error" style="display:flex"> NO RESULT FOUND </li>
+                </ul>
+            </aside>
+        </div>
+        <aside class=header-mobile-nav data-js="mob-nav-menu" aria-labelledby="MobileNavMenu">
+            <ul class="header-mobile-nav__menu" >
+                <li class="header-mobile-nav__link"><a href="#" >about nbc</a></li>
+                <li class="header-mobile-nav__link"><a href="#" >2011 event</a></li>
+                <li class="header-mobile-nav__link"><a href="#" >nordic roaster</a></li>
+                <li class="header-mobile-nav__link"><a href="#" >results</a></li>
+                <li class="header-mobile-nav__link"><a href="#" >links</a></li>
+                <li class="header-mobile-nav__link"><a href="#" >contact</a></li>
+            </ul>
+        </aside>
+    </header>
+    <main>
+        <section class="hero">
+            <div class="carousel" data-flickity='{ "wrapAround": true, "autoPlay": true, "prevNextButtons": false, "pauseAutoPlayOnHover": false}'>
+                <span class="carousel-cell" role="img" data-slider></span>
+                <span class="carousel-cell" role="img" data-slider></span>
+                <span class="carousel-cell" role="img" data-slider></span>
+                <span class="carousel-cell" role="img" data-slider></span>
+            </div>
+            <div class="hero-info">
+                <h1 class="hero-info__title">
+                    “To create an environment in which knowledge about coffee and 
+                    its sphere can be obtained”
+                </h1>
+                <div class="hero-info__links">
+                    <a class="hero-info__circle" href="#" aria-label="link to facebook page"><i class="fab fa-facebook-f"></i></a>
+                    <a class="hero-info__circle" href="#" aria-label="link to twitch page"><i class="fab fa-twitch"></i></a>
+                    <a class="hero-info__circle" href="#" aria-label="link to youtube page"><i class="fab fa-youtube"></i></a>
+                    <a class="hero-info__circle" href="#" aria-label="link to twitter page"><i class="fab fa-twitter"></i></a>
+                    <a class="hero-info__circle" href="#" aria-label="link to gmail page"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+        </section>
+        <section class="content">
+            <div class="content__wrapper">
+                <div class="articles">
+                    <div class="articles__wrapper" data-articles-container>
+                        <!--//// 
+                        <div class="articles__item" data-article >
+                            <div class="articles__img"><img src="https://dummyimage.com/400x400/ba8f40/fff&text=1" alt="article img"></div>
+                            <article class="articles__texts">
+                                <h2>Wonderful Copenhagen 2011 - article 1</h2>
+                                <span>Posted: 23/1-2011</span>
+                                <p>
+                                    The aim is to understand the science behind our sensory perceptions. 
+                                    And by stimulating the senses we will improve our tasting skills. 
+                                    Therefore the program will be a mix of aroma sessions, basic taste theory
+                                    <span class="articles__texts-dots" data-js="dots">...</span>
+                                    <span class="articles__texts-more" data-js="show-more">
+                                        The aim is to understand the science behind our sensory perceptions. 
+                                        And by stimulating the senses we will improve our tasting skills. 
+                                        Therefore the program will be a mix of aroma sessions, basic taste theory
+                                    </span>
+                                </p>
+                                <button class="articles__btn" data-id="more">Read more</button>
+                            </article>
+                        </div>
+                        /////-->
+                    </div>
+                    <div class="pagination" >
+                        <div class="pagination__current" data-pagination-current></div>
+                        <div class="pagination__box" data-pagination-numbers>
+                            <!-- <button class="pagination__box-number" data-prev> &#171; </button> -->
+                            <button class="pagination__box-number"> 1</button>
+                            <button class="pagination__box-number"> 2 </button>
+                            <button class="pagination__box-number"> 3 </button>
+                            <!-- <button class="pagination__box-number" data-next> &#187;</button> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="content-info__wrapper">
+                    <div class="content-info__shop">
+                        <h2>NBC Shop</h2>
+                        <p>
+                            Your shopping cart is empty<br>
+                            <a href="#"> Visit the shop</a>
+                        </p>
+                    </div>
+                    <div class="content-info__event">
+                        <h2>Next Event</h2>
+                        <p>
+                            Nordic Barista Cup 2011<br>
+                            Copenhagen, Denmark<br>
+                            Dates : 25th - 27th August 2011<br>
+                            Theme : SENSORY<br>
+                        </p>
+                        <br>
+                        <a href="#">Sign up now</a>
+                    </div>
+                    <div class="content-info__scoreboard">
+                        <h2>Scoreboard</h2>
+                        <p>
+                            List of winners from past years
+                        </p>
+                        <p>
+                            2011 - ?<br>
+                            2010 - Sweden<br>
+                            2009 - Denmark<br>
+                            2007 - Sweden<br>
+                            2006 - Norway<br>
+                            2005 - Norway<br>
+                            2004 - Denmark
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="sponsors">
+            <div class="sponsors__wrapper">
+                <h3>Nordic Barista Cup Sponsors</h2>
+                <div class="sponsors__grid">
+                    <span class="sponsors__logo" data-aos="fade-right" data-aos-delay="100"><img src="https://dummyimage.com/180x100/6bc22d/ffffff&text=LOGO-1" alt="logo" /></span>
+                    <span class="sponsors__logo" data-aos="fade-right" data-aos-delay="200"><img src="https://dummyimage.com/180x100/6bc22d/ffffff&text=LOGO-2" alt="logo" /></span>
+                    <span class="sponsors__logo" data-aos="fade-right" data-aos-delay="300"><img src="https://dummyimage.com/180x100/6bc22d/ffffff&text=LOGO-3" alt="logo" /></span>
+                    <span class="sponsors__logo" data-aos="fade-right" data-aos-delay="400"><img src="https://dummyimage.com/180x100/6bc22d/ffffff&text=LOGO-4" alt="logo" /></span>
+                    <span class="sponsors__logo" data-aos="fade-right" data-aos-delay="500"><img src="https://dummyimage.com/180x100/6bc22d/ffffff&text=LOGO-5" alt="logo" /></span>
+                    <span class="sponsors__logo" data-aos="fade-right" data-aos-delay="600"><img src="https://dummyimage.com/180x100/6bc22d/ffffff&text=LOGO-6" alt="logo" /></span>
+                    <span class="sponsors__logo" data-aos="fade-left" data-aos-delay="700"><img src="https://dummyimage.com/180x100/6bc22d/ffffff&text=LOGO-7" alt="logo" /></span>
+                    <span class="sponsors__logo" data-aos="fade-left" data-aos-delay="800"><img src="https://dummyimage.com/180x100/6bc22d/ffffff&text=LOGO-8" alt="logo" /></span>
+                    <span class="sponsors__logo" data-aos="fade-left" data-aos-delay="900"><img src="https://dummyimage.com/180x100/6bc22d/ffffff&text=LOGO-9" alt="logo" /></span>
+                    <span class="sponsors__logo" data-aos="fade-left" data-aos-delay="1000"><img src="https://dummyimage.com/180x100/6bc22d/ffffff&text=LOGO-10" alt="logo" /></span>
+                    <span class="sponsors__logo" data-aos="fade-left" data-aos-delay="1100"><img src="https://dummyimage.com/180x100/6bc22d/ffffff&text=LOGO-11" alt="logo" /></span>
+                    <span class="sponsors__logo" data-aos="fade-left" data-aos-delay="1200"><img src="https://dummyimage.com/180x100/6bc22d/ffffff&text=LOGO-12" alt="logo" /></span>
+                    <span class="sponsors__logo" data-aos="fade-up" data-aos-delay="1400"><img src="https://dummyimage.com/180x100/6bc22d/ffffff&text=LOGO-13" alt="logo" /></span>
+                    <span class="sponsors__logo" data-aos="fade-up" data-aos-delay="1400"><img src="https://dummyimage.com/180x100/6bc22d/ffffff&text=LOGO-14" alt="logo" /></span>
+                    <span class="sponsors__logo" data-aos="fade-up" data-aos-delay="1400"><img src="https://dummyimage.com/180x100/6bc22d/ffffff&text=LOGO-15" alt="logo" /></span>
+                    <span class="sponsors__logo" data-aos="fade-up" data-aos-delay="1400"><img src="https://dummyimage.com/180x100/6bc22d/ffffff&text=LOGO-16" alt="logo" /></span>
+                    <span class="sponsors__logo" data-aos="fade-up" data-aos-delay="1400"><img src="https://dummyimage.com/180x100/ffffff/fff&text=+" alt="empty"></span>
+                    <span class="sponsors__logo" data-aos="fade-up" data-aos-delay="1400"><img src="https://dummyimage.com/180x100/ffffff/fff&text=+" alt="empty"></span>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer__wrapper">
+            <div class="footer-about">
+                <h3>About Nordic Barista Cup</h3>
+                <p>
+                    The vision within the Nordic Barista Cup is:
+                    <br />
+                    <br />
+                    <span>“To create an environment in which knowledge about coffee and its sphere can be obtained”</span>
+                    <br />
+                    <br />
+                    ’...create an environment…’
+                    Combined with personally absorption having the opportunity to see and experience countries, people, traditions etc. 
+                    will always serve as a source of inspiration in our daily work.
+                    The organization behind the Nordic Barista Cup see it as its main purpose to be a part of creating this forum in 
+                    which people can meet, bond and achieve further knowledge.
+                </p>
+            </div>
+            <div class="footer-stream">
+                <h3>NBC Flickr Stream</h3>
+                <div class="footer-stream__grid">
+                    <img src="https://dummyimage.com/80x80/616161/fff" alt="">
+                    <img src="https://dummyimage.com/80x80/616161/fff" alt="">
+                    <img src="https://dummyimage.com/80x80/616161/fff" alt="">
+                    <img src="https://dummyimage.com/80x80/616161/fff" alt="">
+                    <img src="https://dummyimage.com/80x80/616161/fff" alt="">
+                    <img src="https://dummyimage.com/80x80/616161/fff" alt="">
+                    <img src="https://dummyimage.com/80x80/616161/fff" alt="">
+                    <img src="https://dummyimage.com/80x80/616161/fff" alt="">
+                    <img src="https://dummyimage.com/80x80/616161/fff" alt="">
+                </div>
+            </div>
+            <div class="footer-contact">
+                <h3>Contact</h3>
+                <span> Nordic Barista Cup</span>
+                <p>
+                    Amagertorv 13   <br />
+                    1160 Copenhagen K <br />
+                    +45 33 12 04 28 <br />
+                    CVR: 11427693 <br />
+                    Email: bbrend@nordicbaristacup.com  
+                </p>
+                <div class="footer-contact__links">
+                    <a class="footer-contact__circle" href="#" aria-label="link to facebook page"><i class="fab fa-facebook-f"></i></a>
+                    <a class="footer-contact__circle" href="#" aria-label="link to twitch page"><i class="fab fa-twitch"></i></a>
+                    <a class="footer-contact__circle" href="#" aria-label="link to youtube page"><i class="fab fa-youtube"></i></a>
+                    <a class="footer-contact__circle" href="#" aria-label="link to twitter page"><i class="fab fa-twitter"></i></a>
+                    <a class="footer-contact__circle" href="#" aria-label="link to gmail page"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script> AOS.init({once:true, disable:'mobile'}); </script>
+</body>
+</html>

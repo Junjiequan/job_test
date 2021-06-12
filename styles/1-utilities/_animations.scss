@@ -1,0 +1,11 @@
+@keyframes rotate{
+    33%{
+        transform:rotate(32deg);
+    }
+    66%{
+        transform:rotate(-32deg);
+    }
+    100%{
+        transform:rotate(0deg);
+    }
+}

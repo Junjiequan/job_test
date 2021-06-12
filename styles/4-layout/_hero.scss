@@ -1,0 +1,64 @@
+@use '../1-utilities/' as *;
+
+
+.hero{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    background:$black;
+}
+
+.hero-info{
+    display:flex;
+    flex-wrap:wrap;
+    // gap:2rem;    
+    margin:2rem 0;
+    justify-content:space-between;
+    max-width:1200px;
+    width:100%;
+    &__title{
+        margin:1rem;
+        flex: 0 1 42rem;
+        opacity:.6;
+        color:$white;
+    }
+    &__links{
+        margin:1rem;
+        padding:0 2rem;
+        flex: 0 1 22rem;
+        display:flex;
+        justify-content:space-around;
+        align-items:center;
+    }
+    &__circle{
+        width:3rem;
+        height:3rem;
+        background:$gray;
+        color:$white;
+        opacity:.6;
+        border-radius:100%;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        font-size:rem(2.2);
+        transition: all .3s ease;
+        i{
+            pointer-events: none;
+        }
+        &:hover{
+            opacity:1;
+        }
+    }
+    @media screen and (max-width:1100px){
+        justify-content:center;
+        &__title{
+            text-align:center;
+        }
+        &__circle{
+            width:2.4rem;
+            height:2.4rem;
+            font-size:rem(1.7);
+        }
+    }
+}
