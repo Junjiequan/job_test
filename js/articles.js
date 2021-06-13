@@ -75,7 +75,6 @@ const renderMoreText = () =>{
         }
     })
 }
-  /**herererer */
 
 
 const buildPagination = (data, rowsPerPage)=>{
