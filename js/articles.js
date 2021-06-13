@@ -94,7 +94,6 @@ const buildPagination = (data, rowsPerPage)=>{
     for(let i = 1; i < pageCount + 1; i++){
         let btn = PaginationButton(i,data,pageIndicator, pageCount);
         btn.classList.add('pagination__box-number');
-        btn.setAttribute('aria-current', 'page');
         arPages.appendChild(btn);
     };
     if(currentPage < pageCount){
@@ -117,9 +116,10 @@ const PaginationButton = (page,data,pageIndicator,pageCount)=>{
         renderArticles(data, rows, currentPage);
 
         const currentBtn = arPages.querySelector('.active')
-        currentBtn.classList.remove('active');
+        currentBtn.removeAttribute('aria-current');
+        currentBtn.classList.remove('active'); 
         button.classList.add('active');
-
+        button.setAttribute('aria-current', 'page');
         pageIndicator.innerHTML = `Page ${currentPage} of ${pageCount}`
 
         if (currentPage == pageCount) buttonNext.style.display='none'
@@ -148,9 +148,11 @@ const nextPageBtn = (data,rowsPerPage) =>{
             renderArticles(data,rowsPerPage,currentPage);
             pageIndicator.innerHTML = `Page ${currentPage} of ${pageCount}` 
             
+            page.removeAttribute('aria-current');
             page.classList.remove('active');
             let selectedPage = document.getElementById(currentPage);
             selectedPage.classList.add('active');
+            selectedPage.setAttribute('aria-current', 'page');
         }
     });
 }
@@ -173,9 +175,11 @@ const prevPageBtn = (data,rowsPerPage) =>{
             renderArticles(data,rowsPerPage,currentPage);
             pageIndicator.innerHTML = `Page ${currentPage} of ${pageCount}` 
 
+            page.removeAttribute('aria-current');
             page.classList.remove('active');
             let selectedPage = document.getElementById(currentPage);
             selectedPage.classList.add('active');
+            selectedPage.setAttribute('aria-current', 'page');
         }
     })
 }
