@@ -2,23 +2,22 @@ const arContainer = document.querySelector('[data-articles-container]');
 const arPages = document.querySelector('[data-pagination-numbers]');
 const pageIndicator = document.querySelector('[data-pagination-current]')
 
+
 let currentPage = 1;
 const rows = 3;
-    
-const articleInit = async () =>{
-    try{
-        const res = await fetch('js/articlesData.json');
-        if(!res.ok){
-            throw new Error('Something went wrong with fetching data');
-        };
-        const data = await res.json();
-        buildPagination(data,rows);
-        renderArticles(data,rows,currentPage);
-        nextPageBtn(data,rows);
-        prevPageBtn(data,rows);
-    } catch (err){
-        console.log(`Error message: ${err}`);
-    }
+
+/**
+ * @desc contains renderArticles, buildPagination, nextPageBtn, prevPageBtn, renderMoreText.
+ */
+const articleRender = (data) =>{
+
+    if(!data) return;
+
+    renderArticles(data,rows,currentPage);
+    buildPagination(data,rows);
+    nextPageBtn(data,rows);
+    prevPageBtn(data,rows);
+    renderMoreText();
 }
 
 const renderArticles = (data,rowsPerPage,page) =>{
@@ -48,38 +47,8 @@ const renderArticles = (data,rowsPerPage,page) =>{
     })
 }
 
-const renderMoreText = () =>{
-    arContainer.addEventListener('click', e =>{
-        const target = e.target.dataset.id;
-        if(target !== 'more') return;
-        
-        // select <P> Tag
-        const text = e.target.previousElementSibling;
-
-        const textDots = text.querySelector('[data-js="dots"]');
-        const textMore = text.querySelector('[data-js="show-more"]');
-        const moreBtn = e.target.closest('[data-id="more"]');
-
-        if(textDots.style.display === "none"){
-            textDots.style.display = "inline";
-            moreBtn.innerText = 'Read more';
-            moreBtn.style.opacity = "1";
-            textMore.style.display = "none";
-            text.setAttribute('aria-expanded','false');
-        } else {
-            textDots.style.display = "none";
-            moreBtn.innerText = 'Read less';
-            moreBtn.style.opacity = "0.8";
-            textMore.style.display = "inline";
-            text.setAttribute('aria-expanded','true');
-        }
-    })
-}
-
-
 const buildPagination = (data, rowsPerPage)=>{
     
-
     arPages.innerHTML = '';
     let pageCount = Math.ceil(data.length / rowsPerPage);
 
@@ -183,5 +152,33 @@ const prevPageBtn = (data,rowsPerPage) =>{
     })
 }
 
-export { articleInit, renderMoreText };
+const renderMoreText = () =>{
+    arContainer.addEventListener('click', e =>{
+        const target = e.target.dataset.id;
+        if(target !== 'more') return;
+        
+        // select <P> Tag
+        const text = e.target.previousElementSibling;
+
+        const textDots = text.querySelector('[data-js="dots"]');
+        const textMore = text.querySelector('[data-js="show-more"]');
+        const moreBtn = e.target.closest('[data-id="more"]');
+
+        if(textDots.style.display === "none"){
+            textDots.style.display = "inline";
+            moreBtn.innerText = 'Read more';
+            moreBtn.style.opacity = "1";
+            textMore.style.display = "none";
+            text.setAttribute('aria-expanded','false');
+        } else {
+            textDots.style.display = "none";
+            moreBtn.innerText = 'Read less';
+            moreBtn.style.opacity = "0.8";
+            textMore.style.display = "inline";
+            text.setAttribute('aria-expanded','true');
+        }
+    })
+}
+
+export { articleRender };
 

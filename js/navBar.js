@@ -9,11 +9,15 @@ const openNavMenu = () =>{
     hamburgerIcon.classList.toggle("is-active");
     mobNavBar.style.transform = "translateY(0)";
 }
+
 const closeNavMenu = () =>{
     hamburgerIcon.classList.toggle("is-active");
     mobNavBar.style.transform = "translateY(-100%)";
 }
 
+/**
+ * @desc contains openNavMenu, closeNavMenu and a complicate hamburger animation function.
+ */
 const navHamburger = () =>{
     if (hamburgers.length > 0) {
         forEach(hamburgers, function(hamburger) {

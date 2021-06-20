@@ -1,6 +1,7 @@
 const slider = document.querySelectorAll('[data-slider]');
 const numbers = [1,2,3,4].sort(() => Math.random() - 0.5);
 
+
 const imageSlider = () =>{
 
     slider.forEach((elem,index)=>{
