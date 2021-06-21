@@ -632,7 +632,7 @@ span {
 }
 
 .header {
-  z-index: 999;
+  z-index: 99;
   position: fixed;
   width: 100%;
   display: flex;
@@ -656,7 +656,7 @@ span {
   max-width: 100%;
 }
 .header__logo img {
-  width: 100%;
+  max-height: 4rem;
 }
 @media screen and (max-width: 720px) {
   .header {
@@ -668,6 +668,10 @@ span {
   }
   .header__logo {
     padding-top: 1rem;
+  }
+  .header__logo img {
+    max-height: 3rem;
+    min-width: 10rem;
   }
 }
 
