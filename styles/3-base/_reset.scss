@@ -34,15 +34,7 @@ ul{
   margin:0;
   padding:0;
 }
-/*Prevent overflow */
-:root {
-  overflow-y: auto;
-  overflow-x: hidden;
-}
 
-:root html {
-  position: absolute;
-}
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
 ul[role='list'],
@@ -106,7 +98,8 @@ body {
   text-rendering: optimizeSpeed;
   line-height: 1.5;
   background: hsl(0, 0%, 100%);
-  overflow-x: hidden;
+  overflow-y: scroll;
+  overflow-y: overlay;
 }
 
 /* Make images easier to work with */
