@@ -24,7 +24,7 @@ const modalInit = (data) =>{
 
 const openModal = ()=>{
     modal.style.display="flex";
-    body.style.overflow = "hidden";
+    body.style.overflow = "overlay";
     setTimeout(()=>{
         modal.style.opacity ="1";
     },20);

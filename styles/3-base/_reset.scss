@@ -35,6 +35,11 @@ ul{
   padding:0;
 }
 
+/*Prevent overflow hidden changes screen width*/
+:root html{
+  position:absolute;
+}
+
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
 ul[role='list'],
 ol[role='list'],
