@@ -513,7 +513,12 @@ ul {
   padding: 0;
 }
 
-/*Prevent overflow hidden changes screen width*/
+/*Prevent overflow */
+:root {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
 :root html {
   position: absolute;
 }
