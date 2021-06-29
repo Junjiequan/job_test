@@ -6,6 +6,9 @@ const searchContainer = document.querySelector('[data-js="search-opacity"]');
  * @desc contains setList, clearList, setNoresults, getRelevancy
  */
  const filterData = (data) => {
+
+    if(!data) return;
+    
     searchInput.addEventListener('input',(e)=>{
         let value = e.target.value;
         if(value && value.trim().length > 0){

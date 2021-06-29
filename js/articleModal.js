@@ -8,6 +8,9 @@ const list = document.querySelector('[data-search-list]');
  * @desc contain renderModalData, openModal, closeModal.
  */
 const modalInit = (data) =>{
+
+    if(!data) return;
+    
     list.addEventListener('click', (e)=>{
         const itemText = e.target.innerText.trim().toLowerCase();
         renderModalData(data.filter(article=> article.title.includes(itemText)));
