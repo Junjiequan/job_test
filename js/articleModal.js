@@ -32,7 +32,6 @@ const openModal = ()=>{
 
 const closeModal = ()=>{
     body.style.overflow = "auto"
-    body.style.overflow = "overlay"
     modal.style.opacity ="0";
     setTimeout(()=>{
         modal.style.display="none"
