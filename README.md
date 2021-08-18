@@ -6,7 +6,7 @@ Tech staks used HTML, SASS (BEM & 7-1 architecture), Javascript.
 
 prefers-reduced-motion: reduce used for anyone who prefer not to see animation & transitions.
 
-Flickity API were used for slider effect.
+Flickity library were used for slider effect.
 
 Slider settings : random image on refresh, slide image ( per 3s ), click or drag stops auto slide.
 
