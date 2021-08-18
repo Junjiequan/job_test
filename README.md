@@ -18,6 +18,6 @@ Click searched content popup content modal. ( I wasn’t sure about result hight
 
 Tablet & Mobile responsive.
 
-AOS API were used for SPONSORS logo animation.
+AOS library were used for SPONSORS logo animation.
 
 Animation settings: load only once. prevented animation on mobile.
